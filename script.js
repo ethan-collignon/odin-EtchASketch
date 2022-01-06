@@ -76,7 +76,7 @@ function changeColor(e) {
   } else if (currentMode === 'color') {
     e.target.style.backgroundColor = currentColor
   } else if (currentMode === 'eraser') {
-    e.target.style.backgroundColor = '#fefefe'
+    e.target.style.backgroundColor = '#b6b6b6'
   } else if (currentMode === 'gray') {
     const RNum = Math.floor(Math.random() * 256)
     e.target.style.backgroundColor = `rgb(${RNum},${RNum},${RNum})`

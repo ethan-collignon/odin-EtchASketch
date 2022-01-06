@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Pacifico&family=Qwitcher+Grypen:wght@700&family=Yuji+Hentaigana+Akebono&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -127,24 +129,27 @@ div {
     flex-direction: column;
     justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.24) 5px 5px 8px;
-    border-radius: 9px;
+    border-radius: 17px;
     border: 1px solid black;
-}
+  }
 
-.sketch h1 {
+  .sketch h1 {
     text-align: center;
     position: relative;
     height: 50px;
     width: 250px;
     padding-left: 225px;
+    margin-top: 10px;
+    font-family: Pacifico, sans-serif;
+    font-size: 38px;
 }
   
-  .grid {
-    display: flex;
+.grid {
+    display: grid;
     width: 700px;
     height: 500px;
-    background-color: #fefefe;
-    margin-top: -70px;
+    background-color: #b6b6b6;
+    margin-top: -80px;
     border-radius: 15px;
     -webkit-box-shadow: 0 0 10px rgb(18, 8, 8);
         box-shadow: 0 0 10px rgb(18, 8, 8);
