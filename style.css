@@ -124,13 +124,14 @@ div {
   .sketch {
     width: 1000px;
     height: 700px;    
-    background-color: red;
+    background-color: rgb(222, 6, 6);
     display: grid;
     flex-direction: column;
     justify-content: center;
-    box-shadow: rgba(0, 0, 0, 0.24) 5px 5px 8px;
+    -webkit-box-shadow: 0 0 7px rgb(18, 8, 8);
+        box-shadow: 0 0 7px rgb(18, 8, 8);
     border-radius: 17px;
-    border: 1px solid black;
+    border: .5px groove black;
   }
 
   .sketch h1 {
@@ -142,6 +143,8 @@ div {
     margin-top: 10px;
     font-family: Pacifico, sans-serif;
     font-size: 38px;
+    color: rgb(203, 158, 46);
+    text-shadow: 8px, 8px, 1px,black;
 }
   
 .grid {
