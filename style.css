@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+  
+body {
+    background-color: #ededed;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 100px;
+  }
+  
+div {
+      border-radius: 1px;
+  }
+
+  button,
+  input {
+    width: 100%;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* HEADER */
+  
+  .header {
+    padding: 15px 0;
+    text-align: center;
+    font-size: 36px;
+  }
+  
+  /* .title {
+    text-align: center;
+    font-size: 80px;
+  } */
+  
+  /* MAIN */
+  
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 100px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 200px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+  }
+  
+  button.active {
+    background-color: #333;
+    color: #ededed;
+  }
+  
+  button,
+  input[type='color'] {
+    transition: transform 0.1s ease-in-out;
+  }
+  
+  button:hover,
+  input[type='color']:hover {
+    transform: scale(1.05);
+  }
+  
+  input[type='color']:active {
+    transition: transform 0.05s ease-in-out;
+    transform: scale(1);
+  }
+  
+  input[type='color'] {
+    -webkit-appearance: none;
+    width: 80px;
+    height: 80px;
+    border: none;
+  }
+  
+  input[type='color']::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  
+  input[type='color']::-webkit-color-swatch {
+    border: none;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  .size-value {
+    margin-bottom: -20px;
+    font-size: 20px;
+  }
+  
+  input[type='range'] {
+    -webkit-appearance: none;
+    background-color: #ededed;
+  }
+  
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 10px;
+    border: 1px solid #333;
+    border-radius: 25px;
+    background: #fefefe;
+  }
+  
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 25px;
+    margin-top: -8px;
+    background: #333;
+  }
+
+  .sketch {
+    width: 1000px;
+    height: 700px;    
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 5px 5px 8px;
+    border-radius: 9px;
+    border: 1px solid black;
+}
+  
+  .grid {
+    display: grid;
+    width: 700px;
+    height: 500px;
+    background-color: #fefefe;
+    margin-top: 70px;
+    border-radius: 15px;
+    -webkit-box-shadow: 0 0 10px rgb(18, 8, 8);
+        box-shadow: 0 0 10px rgb(18, 8, 8);
+    
+  }
+
+  .leftKnob {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background:#fefefe;
+    border-radius: 50%;
+    margin-top: 590px;
+    margin-right: 670px;
+    box-shadow: 0 0 10px rgb(18, 8, 8);
+  }
+
+  .rightKnob {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background:#fefefe;
+    border-radius: 50%;
+    margin-top: 590px;
+    margin-left: 670px;
+    box-shadow: 0 0 10px rgb(18, 8, 8);
+  }
+
+  
+  
+  /* FOOTER */
+  
+  /* .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+  } */
+  
+  /* .fa-github {
+    color: var(--primary-dark);
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+  } */
+  
+  /* .fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+  } */
+  
+  /* MEDIA QUERIES */
+  
+  @media (max-width: 1200px) {
+    .main {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 850px) {
+    .main {
+      gap: 50px;
+    }
+  
+    .settings {
+      width: 150px;
+      gap: 16px;
+    }
+  
+    .size-value {
+      margin-bottom: -4px;
+    }
+  
+    .grid {
+      width: 400px;
+      height: 400px;
+    }
+  }
+  
+  @media (max-width: 650px) {
+    .title {
+      font-size: 50px;
+    }
+  
+    .main {
+      flex-direction: column-reverse;
+    }
+  
+    .grid {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+
+
+
+
+
+/* .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.section h1 {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 4em;     
+}
+
+.container {
+    width: 600px;
+    height: 500px;
+    display: grid;
+    z-index: 100;
+} */
