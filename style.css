@@ -9,8 +9,6 @@ body {
     background-color: #b1f3fa;
     color: #333;
     font-family: 'Roboto', sans-serif;
-    /* line-height: 1.6; */
-    /* margin-bottom: 100px; */
   }
 
 .header {
@@ -22,12 +20,12 @@ body {
 .main {
     display: flex;
     justify-content: center;
-    gap: 50px;
     max-width: 2000px;
     }
 
 .container {
     display: flex;
+    place-items: center;
     gap: 50px;
 }
 
@@ -38,7 +36,7 @@ body {
     background-color: rgb(222, 6, 6);
     display: grid;
     flex-direction: column;
-    justify-content: center;
+    place-items: center;
     -webkit-box-shadow: 0 0 7px rgb(18, 8, 8);
         box-shadow: 0 0 7px rgb(18, 8, 8);
     border-radius: 17px;
@@ -47,11 +45,10 @@ body {
 
   .sketch h1 {
     text-align: center;
-    position: relative;
     height: 50px;
     width: 250px;
-    padding-left: 225px;
     margin-top: 10px;
+    z-index: 1;
     font-family: Pacifico, sans-serif;
     font-size: 38px;
     color: rgb(203, 158, 46);
@@ -62,6 +59,7 @@ body {
     display: grid;
     width: 700px;
     height: 500px;
+    margin-top: 25px;
     background-color: #b6b6b6;
     border-radius: 15px;
     -webkit-box-shadow: 0 0 10px rgb(18, 8, 8);
@@ -73,16 +71,19 @@ div {
     border-radius: 1px;
 }
 
+.container2 {
+    display: grid;
+    place-items: center;
+}
+
 /* Knobs*/
   .leftKnob {
-    position: absolute;
+    position: relative;
     width: 100px;
     height: 100px;
     background:#fefefe;
     border-radius: 50%;
-    margin-top: 590px;
-    margin-right: 650px;
-    margin-left: 15px;
+    margin-right: 770px;
     box-shadow: 0 0 10px rgb(18, 8, 8);
   }
 
@@ -98,13 +99,13 @@ div {
   }
 
   .rightKnob {
-    position: absolute;
+    position: relative;
     width: 100px;
     height: 100px;
     background:#fefefe;
     border-radius: 50%;
-    margin-top: 590px;
-    margin-left: 1040px;
+    margin-left: 770px;
+    margin-top: -110px;
     box-shadow: 0 0 10px rgb(18, 8, 8);
   }
   
@@ -131,13 +132,13 @@ div {
   
   button {
     padding: 10px 20px;
-    border: 1px solid #333;
-    border-radius: 5px;
+    border: 2px solid rgb(22, 19, 66);
+    border-radius: 9px;
   }
   
   button.active {
-    background-color: #333;
-    color: #ededed;
+    background-color: rgb(22, 19, 66);
+    color: #b1f3fa;
   }
   
   button,
@@ -175,15 +176,19 @@ div {
 /*SLIDER*/
 /*slider title(16x16)*/
   .size-value {
-    margin-bottom: -60px;
+    margin-top: -70px;
+    z-index: 2;
     font-size: 18px;
     text-align: center;
+    color: rgb(203, 158, 46);
+    text-shadow: black;
   }
 
 /* general slider*/
 input[type='range'] {
-    padding-left: 220px;
+    margin-top: -30px;
     width: 250px;
+    height: 15px;
     -webkit-appearance: none;
     background-color: rgb(222, 6, 6);
 }
@@ -191,7 +196,7 @@ input[type='range'] {
 /* slider rail*/
 input[type='range']::-webkit-slider-runnable-track {
     height: 10px;
-    border: 1px solid #333;
+    border: 2px solid rgb(203, 158, 46);
     border-radius: 25px;
     background: #fefefe;
   }
@@ -203,7 +208,7 @@ input[type='range']::-webkit-slider-thumb {
     height: 24px;
     border-radius: 25px;
     margin-top: -8px;
-    background: #333;
+    background: rgb(203, 158, 46);
   }
 
 
@@ -217,27 +222,28 @@ input[type='range']::-webkit-slider-thumb {
   }
   
   @media (max-width: 850px) {
-    .main {
-      gap: 50px;
+    .container {
+        gap: 20px;
     }
   
     .settings {
       width: 150px;
-      gap: 16px;
-    }
-  
-    .size-value {
-      margin-bottom: -4px;
+      gap: 10px;
     }
   
     .grid {
       width: 400px;
       height: 400px;
+      margin-top: -20px;
     }
 
     .sketch {
         width: 500px;
         height: 550px;
+    }
+
+    .sketch h1 {
+        margin-top: -5px;
     }
 
     .leftKnob {
@@ -247,15 +253,27 @@ input[type='range']::-webkit-slider-thumb {
     .rightKnob {
         display: none;
     }
+
+    .size-value {
+        margin-bottom: -20px;
+    }
+
+    input[type='range'] {
+        margin-bottom: -25px;
+    }
   }
   
   @media (max-width: 650px) {
     .title {
       font-size: 50px;
     }
+
+    .container {
+        flex-direction: column;
+    }
   
     .main {
-      flex-direction: column-reverse;
+      flex-direction: column;
     }
   
     .grid {

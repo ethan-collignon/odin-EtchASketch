@@ -14,7 +14,7 @@
     <div class="main">
         <div class="container">
             <div class="settings">
-                <input id="colorPicker" type="color" value="#333333" />
+                <input id="colorPicker" type="color" value="#ef0bd0" style="background-color: #b1f3fa;"/>
                 <button id="colorBtn">Color mode</button>
                 <button id="rainbowBtn">Rainbow mode</button>
                 <button id="grayBtn">Gray mode</button>
@@ -22,20 +22,23 @@
             <div class="sketch">
                 <h1 class="title">Etch-A-Sketch</h1>
                 <div id="grid" class="grid"></div>
-                <div class="leftKnob">
-                    <div class="innerCircle"></div>
+                <div class="container2">
+                    <div class="leftKnob">
+                        <div class="innerCircle"></div>
+                    </div>
+                    <div id="sizeValue" class="size-value">16 x 16</div>
+                        <input id="sizeSlider" type="range" value="16" min="1" max="64" />
+                    </div>
+                    <div class="rightKnob">
+                        <div class="innerCircle"></div>
+                    </div>
                 </div>
-                <div id="sizeValue" class="size-value">16 x 16</div>
-                    <input id="sizeSlider" type="range" value="16" min="1" max="64" />
-                </div>
-                <div class="rightKnob">
-                    <div class="innerCircle"></div>
+                <div class="settings">
+                    <button id="eraserBtn">Eraser</button>
+                    <button id="clearBtn">Clear</button>
                 </div>
             </div>
-            <div class="settings">
-                <button id="eraserBtn">Eraser</button>
-                <button id="clearBtn">Clear</button>
-            </div>
+            
         </div>  
     </div>
 
